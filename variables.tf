@@ -37,3 +37,33 @@ variable "enable_vpn_gateway" {
   type        = bool
   default     = true
 }
+
+variable "ecs_cluster_name" {
+  description = "The name of the ECS cluster"
+  type        = string
+  default     = "ecs-cluster"
+}
+
+variable "asg_name" {
+  description = "The name of the AutoScaling group"
+  type        = string
+  default     = "ecs-asg"
+}
+
+variable "min_size" {
+  description = "The minimum size of the AutoScaling group"
+  type        = number
+  default     = 1
+}
+
+variable "max_size" {
+  description = "The maximum size of the AutoScaling group"
+  type        = number
+  default     = 3
+}
+
+variable "desired_capacity" {
+  description = "The desired capacity of the AutoScaling group"
+  type        = number
+  default     = 2
+}
